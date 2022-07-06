@@ -3,13 +3,11 @@ const app = express();
 const http = require("http");
 const cors = require("cors");
 const { Server } = require("socket.io");
-const { corsAccessControl } = require("./routes/condigRoutes");
 require("dotenv").config();
 
 app.use(cors());
 const server = http.createServer(app);
 
-corsAccessControl(app);
 //connet out server with socket.io server
 const io = new Server(server, {
   cors: {
