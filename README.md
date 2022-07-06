@@ -38,18 +38,6 @@ To get a local copy up and running follow these simple example steps.
    ```sh
    npm install
    ```
-3. Enter your API in `\src\services\apiService.js`
-   ```js
-   const API_KEY = "ENTER YOUR API"; //the defaut port is 3002;
-   ```
-4. Clone the server repo
-   ```sh
-   git clone https://github.com/Ariel-levi/ShipMarket_server.git
-   ```
-5. Install NPM packages
-   ```sh
-   npm install
-   ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
