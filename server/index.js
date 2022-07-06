@@ -9,9 +9,10 @@ app.use(cors());
 const server = http.createServer(app);
 
 //connet out server with socket.io server
+let urlClient = process.env.CLIENT_URL || "http://localhost:3000";
 const io = new Server(server, {
   cors: {
-    origin: process.env.CLIENT_URL, //telling our server which server is going to be calling to our socket.io server, the client side
+    origin: urlClient, //telling our server which server is going to be calling to our socket.io server, the client side
     methods: ["GET", "POST"], // methods allowed
   },
 });
