@@ -11,7 +11,7 @@ const server = http.createServer(app);
 //connet out server with socket.io server
 const io = new Server(server, {
   cors: {
-    origin: "*", //telling our server which server is going to be calling to our socket.io server, the client side
+    origin: process.env.CLIENT_URL, //telling our server which server is going to be calling to our socket.io server, the client side
     methods: ["GET", "POST"], // methods allowed
   },
 });
