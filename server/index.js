@@ -8,6 +8,8 @@ require("dotenv").config();
 app.use(cors());
 const server = http.createServer(app);
 
+const { corsAccessControl } = require("./routes/config_routes");
+corsAccessControl(app);
 //connet out server with socket.io server
 const io = new Server(server, {
   cors: {
