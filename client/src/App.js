@@ -4,7 +4,9 @@ import react, { useEffect, useState } from "react";
 import Chat from "./comps/chat";
 
 //change to const variable
-const socket = io.connect(process.env.REACT_APP_SERVER_URL);
+const socket = io.connect(
+  process.env.REACT_APP_SERVER_URL || "http://localhost:3002"
+);
 
 function App() {
   const [userName, setUserName] = useState("");
