@@ -26,7 +26,7 @@ function App() {
           <h3>Join a chat</h3>
           <input
             type="text"
-            placeholder="john..."
+            placeholder="name..."
             onChange={(e) => setUserName(e.target.value)}
           />
           <input
