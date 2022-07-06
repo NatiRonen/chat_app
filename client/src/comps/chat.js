@@ -68,6 +68,13 @@ function Chat(props) {
         />
         <button onClick={sendMessage}>send</button>
       </div>
+      {/* <br /> */}
+      <button
+        className="btn btn-danger mt-2"
+        onClick={() => props.setShowChat(false)}
+      >
+        Quit this chat
+      </button>
     </div>
   );
 }
