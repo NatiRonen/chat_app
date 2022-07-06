@@ -23,7 +23,7 @@ function App() {
       {console.log("from app")}
       {!showChat ? (
         <div className="joinChatContainer">
-          <h3>Join a chat</h3>
+          <h3>Join to chat</h3>
           <input
             type="text"
             placeholder="name..."
@@ -39,7 +39,12 @@ function App() {
           </button>
         </div>
       ) : (
-        <Chat socket={socket} userName={userName} room={room} />
+        <Chat
+          socket={socket}
+          userName={userName}
+          room={room}
+          setShowChat={setShowChat}
+        />
       )}
     </div>
   );
